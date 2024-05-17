@@ -13,9 +13,10 @@ const octokit = new Octokit({
 });
 
 app.use(express.json());
-app.use(cors()); 
+app.use(cors());
+
 app.post('/workflow', async (req, res) => {
-    
+
     const { username, github_token, repo_name, github_commit_mail, gitart_commit_command } = req.body;
 
     try {
